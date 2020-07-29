@@ -1,4 +1,4 @@
-# Nextcloud-TagSpaces integration service
+# Nextcloud - TagSpaces integration service
 
 Microservice that replicates tags created with TagSpaces app, to Nextcloud.
 
@@ -9,7 +9,7 @@ Microservice that replicates tags created with TagSpaces app, to Nextcloud.
 [Nextcloud has applications for mobile and desktop devices](https://github.com/nextcloud/desktop), the same as [TagSpaces](https://github.com/tagspaces/tagspaces).
 Even that Nextcloud has it's own tag system, TagSpaces app excels in this task.
 
-This integration service enables you to use TagSpaces interfaces and apply changes to Nextcloud files.
+This integration service enables you to use TagSpaces desktop interfaces and apply changes to Nextcloud files.
 
 ## Motivation
 
@@ -42,13 +42,13 @@ This integration service uses the great work done by hobigo with the [node-Nextc
 1. Clone
 
 ``` bash
-   git clone https://github.com/velocity-formula/nextcloud-tagspaces-integration-service
+   git clone https://github.com/velocity-formula/nextcloud-tagspaces-integration-service.git
 ```
 
 2. Build
 
 ``` bash
-   cd Nextcloud-tagspaces-integration-service
+   cd nextcloud-tagspaces-integration-service
 
    docker build -t ncts-service .
 ```
@@ -100,6 +100,13 @@ This integration service uses the great work done by hobigo with the [node-Nextc
       # Default is for every 1 minute: "*/1 * * * *"
       # Example for every 5 minutes:
       APP_CRON_INTERVAL="*/5 * * * *"
+   ```
+
+- CORS_ALLOW_ORIGINS: Indicates allowed CORS origins for api requests. Should change to reflect network installation evironment.
+
+   ``` bash
+      # Default is "localhost"
+      CORS_ALLOW_ORIGINS="example.com"
    ```
 
 Default values can be customized at ./src/config/.env file
@@ -185,11 +192,9 @@ Download and configure with your preferences. Default configuration will point t
 
 ## Important notice
 
-Besides the authentication created for the nextcloud user, current implementation has no security measures as primary service use is intended for **local internal** use.
-
+Besides the authentication created for the nextcloud user and CORS_ALLOW_ORIGINS environment variable, current implementation has no other security measures as service use is intended for **local internal** use only.
 
 ## License
-
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -201,4 +206,4 @@ WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
 or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License
 for more details.
 
- The license text is available in the [LICENSE](LICENSE.txt) file.
+The license text is available in the [LICENSE](LICENSE.txt) file.
