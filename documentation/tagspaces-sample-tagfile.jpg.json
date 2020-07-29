@@ -1,0 +1,19 @@
+﻿{
+  "tags": [
+    {
+      "created_date": "2020-06-29T15:32:24.012Z",
+      "type": "sidecar",
+      "title": "TAG_NAME",
+      "functionality": "",
+      "description": "",
+      "icon": "",
+      "color": "#ffffffff",
+      "textcolor": "#000000ff",
+      "style": "",
+      "modified_date": "2020-06-29T18:53:08.173Z"
+    }
+  ],
+  "appName": "TagSpaces",
+  "appVersionUpdated": "3.5.4",
+  "lastUpdated": "2020-07-03T10:34:23.647Z"
+}

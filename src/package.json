@@ -1,0 +1,36 @@
+{
+  "name": "nextcloud-tagspaces-integration-service",
+  "version": "0.0.1",
+  "main": "./app.js",
+  "private": true,
+  "scripts": {
+    "start": "node ./app.js",
+    "dev": "nodemon ./app.js --watch ./"
+  },
+  "dependencies": {
+    "async": "^2.6.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "cron": "^1.8.2",
+    "debug": "~2.6.3",
+    "dotenv-safe": "^2.3.1",
+    "express": "^4.17.1",
+    "express-content-length-validator": "^1.0.0",
+    "helmet": "^3.23.3",
+    "joi": "^14.3.1",
+    "lodash": "^4.17.10",
+    "morgan": "^1.10.0",
+    "nextcloud-node-client": "^1.8.2",
+    "parse-error": "^0.2.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "mocha": "^6.2.1",
+    "nodemon": "^1.19.3",
+    "nyc": "^14.1.1"
+  }
+}
