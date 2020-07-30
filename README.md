@@ -73,7 +73,7 @@ This integration service uses the great work done by hobigo with the [node-Nextc
 
 #### required
 
-- NEXTCLOUD_USERNAME: Nextcloud user name. Recommendation is to create a service user.
+- NEXTCLOUD_USERNAME: Nextcloud user name. Beware of Nexcloud security context, as integration service is subject to it.
 - NEXTCLOUD_PASSWORD: Device or service password created for this service application.
 - NEXTCLOUD_SERVER_URL: Nextcloud service ulr. Include port if necessary.
 - NEXTCLOUD_INTEGRATION_TAGNAME: The name of the tag that will be used in Nextcloud to mark the unprocessed tagspaces JSON files.
@@ -193,6 +193,9 @@ Download and configure with your preferences. Default configuration will point t
 ## Important notice
 
 Besides the authentication created for the nextcloud user and CORS_ALLOW_ORIGINS environment variable, current implementation has no other security measures as service use is intended for **local internal** use only, so only GET api verbs are allowed. CORS_ALLOW_METHODS environment variable controlls allowed api verbs, but only has meaning if some other functionality is added.
+
+Integration service is limited (by now) to Nextcloud security context of the user is set on NEXTCLOUD_USERNAME environment variable.
+If a service user is configure for the integration service, access should be granted to other users files. Consider using TagSpaces con Nexcloud shares folders.
 
 ## License
 
