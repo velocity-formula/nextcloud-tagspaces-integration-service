@@ -113,9 +113,9 @@ Default values can be customized at ./src/config/.env file
 
 ## Service API
 
-- /api/test-connect  :  test service connection to Nextcloud server.
-- /api/process-tags  :  manually fires the integration process.
-- /api/get-progress  :  gets progress and process queue status.
+- GET - /api/test-connect  :  test service connection to Nextcloud server.
+- GET - /api/process-tags  :  manually fires the integration process.
+- GET - /api/get-progress  :  gets progress and process queue status.
 
 ``` json
 // htttp://ncts-service/api/get-progress
@@ -160,7 +160,7 @@ Default values can be customized at ./src/config/.env file
       ```bash 
       #Example:
       When: "File is changed".
-      and: "Request URL" matches "Custom URL reg expression" /(\.ts\/){1}.*(\.json$)(?<!.ts)$/i
+      and: "Request URL" matches "Custom URL", use this regex as example: /(\.ts\/){1}.*(\.json$)(?<!.ts)$/i
       Automated tagging: "TAG PENDING"
       ```
 
@@ -192,7 +192,7 @@ Download and configure with your preferences. Default configuration will point t
 
 ## Important notice
 
-Besides the authentication created for the nextcloud user and CORS_ALLOW_ORIGINS environment variable, current implementation has no other security measures as service use is intended for **local internal** use only.
+Besides the authentication created for the nextcloud user and CORS_ALLOW_ORIGINS environment variable, current implementation has no other security measures as service use is intended for **local internal** use only, so only GET api verbs are allowed. CORS_ALLOW_METHODS environment variable controlls allowed api verbs, but only has meaning if some other functionality is added.
 
 ## License
 
