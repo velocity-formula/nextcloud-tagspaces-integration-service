@@ -1,6 +1,14 @@
-
+/**
+ *
+ * Author:  gmazzotta
+ *
+ * License: GNU - Copyright (c) Velocity Formula
+ * @link
+ *
+ */
 
 // Controls tagging execution from any source.
+
 class TagProcess {
 
 

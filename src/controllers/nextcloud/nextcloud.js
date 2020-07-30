@@ -1,8 +1,8 @@
 /**
  *
- * Author:  Velocity Formula
+ * Author:  gmazzotta
  *
- * License: MIT - Copyright (c) AppSeed.us
+ * License: GNU - Copyright (c) Velocity Formula
  * @link
  *
  */

@@ -1,3 +1,13 @@
+/**
+ *
+ * Author:  gmazzotta
+ *
+ * License: GNU - Copyright (c) Velocity Formula
+ * @link
+ *
+ */
+
+ 
 const Joi          = require('joi');
 
 const status     = require('../config/app.config').FILE_STATUS;

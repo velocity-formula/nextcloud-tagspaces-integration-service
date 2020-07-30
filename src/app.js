@@ -1,28 +1,21 @@
 /**
  *
- * Author:  Velocity Formula
+ * Author:  gmazzotta
  *
- * License: MIT - Copyright (c) AppSeed.us
- * @link 
+ * License: GNU - Copyright (c) Velocity Formula
+ * @link
  *
  */
 
 
-/**
- * ENVIRONMENT
- */
-require('dotenv-safe').config({ path: `${__dirname}/config/.env`, sample: `${__dirname}/config/.env.example`,  allowEmptyValues: false});
+// ENVIRONMENT
+ require('dotenv-safe').config({ path: `${__dirname}/config/.env`, sample: `${__dirname}/config/.env.example`,  allowEmptyValues: false});
 
-/**
- * global_functions and configurations
- */
+// global_functions and configurations
 require ('./lib/global_functions');
 require ('./config/app.config');
 
-/**
- * @description Express Framework module
- */
-
+// Express Framework module
 const express    = require('express');
 const logger     = require('morgan');
 const bodyParser = require('body-parser');

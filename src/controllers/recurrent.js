@@ -1,11 +1,12 @@
 /**
  *
- * Author:  Velocity Formula
+ * Author:  gmazzotta
  *
- * License: MIT - Copyright (c) AppSeed.us
- * @link 
+ * License: GNU - Copyright (c) Velocity Formula
+ * @link
  *
  */
+
 const EventController = require('events');
 const http            = require('http');
 const CronJob         = require('cron').CronJob;
