@@ -1,8 +1,11 @@
-/*
-
-For Extended Configurtation Porpouse
-
-*/
+/**
+ *
+ * Author:  gmazzotta
+ *
+ * License: GNU - Copyright (c) Velocity Formula
+ * @link
+ *
+ */
 
 const NEXCLOUD_CONFIG = {
   basicAuth: {
